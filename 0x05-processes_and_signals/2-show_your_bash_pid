@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script is displaying lines containig bash as the key word
+# shellcheck disable=SC2009
+
+ps auxf | grep bash
