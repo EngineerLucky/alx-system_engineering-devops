@@ -1,4 +1,4 @@
-# This puppet must instal flask 2.1.0'
+# This puppet installs flask 2.1.0'
 
 package { 'flask':
   ensure   => '2.1.0',
