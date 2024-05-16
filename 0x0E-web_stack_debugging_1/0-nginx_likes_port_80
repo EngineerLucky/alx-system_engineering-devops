@@ -7,4 +7,4 @@ rm default;
 # It creates symbolic link to the deafult file in sites-available
 ln -s /etc/nginx/sites-available/default default;
 # Restart Nginx
-service nginx restarti
+service nginx restart
