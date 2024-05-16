@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-# it should configures a server to listening on port 80 of all servers active IPv4 IPs
-
-sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx restart
+# it fixs nginx listening on port 80
+# It should go to sites-enabled folder for Nginx
+cd /etc/nginx/sites-enabled/ || exit;
+# It must remove the default file
+rm default;
+# It creates symbolic link to the deafult file in sites-available
+ln -s /etc/nginx/sites-available/default default;
+# Restart Nginx
+service nginx restarti
