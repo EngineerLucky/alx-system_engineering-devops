@@ -3,9 +3,9 @@
     Exports api data in the CSV format.
 """
 
-import sys
-import requests
 import csv
+import requests
+import sys
 
 if __name__ == "__main__":
     id = sys.argv[1]
