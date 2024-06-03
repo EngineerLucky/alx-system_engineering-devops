@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 """
-    Export api data in the CSV format.
+    Exports api data in the CSV format.
 """
 
-import csv
-import requests
 import sys
+import requests
+import csv
 
 if __name__ == "__main__":
-    user = sys.argv[1]
-    url_user = "https://jsonplaceholder.typicode.com/users/{}".format(id)
+    id = sys.argv[1]
+    usrurl = "https://jsonplaceholder.typicode.com/users/{}".format(id)
     tdsurl = "https://jsonplaceholder.typicode.com/users/{}/todos".format(id)
 
-    u = requests.get(url_user).json()
+    u = requests.get(usrurl).json()
 
     do = requests.get(tdsurl).json()
 
