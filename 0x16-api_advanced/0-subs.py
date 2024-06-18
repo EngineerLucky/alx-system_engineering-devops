@@ -9,6 +9,7 @@ import requests
 def number_of_subscribers(subreddit):
     """Return the total number of subscribers on a given subreddit."""
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    # Set custom with a User-Agent
     headers = {"User-Agent": "My-User-Agent"}
     response = requests.get(url, headers=headers, allow_redirects=False)
     if response.status_code == 200:
